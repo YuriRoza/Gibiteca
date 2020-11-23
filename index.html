@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Gibiteca</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="comics.jpg" alt="Comics" class="imgGibi">
+            </div>
+            <div class="col-sm-9">
+                <h1>Gibiteca</h1>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="inNome">Nome do Gibi:</label>
+                                <input type="text" class="form-control" placeholder="Insira aqui o título do gibi" id="inNome">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="inRoteirista">Roteirista:</label>
+                                <input type="text" class="form-control" id="inRoteirista">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="inDesenhista">Desenhista:</label>
+                                <input type="text" class="form-control" id="inDesenhista">
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="inEditora">Editora (Original):</label>
+                                <input type="text" class="form-control" placeholder="Editora original" id="inEditora">
+                            </div>
+                            <div class="form-group col-sm-5">
+                            <label for="inEditoraBr">Editora (Brasil):</label>
+                            <input type="text" class="form-control" placeholder="Editora no Brasil" id="inEditoraBr">
+                        </div>
+                            <div class="form-group col-sm-2">
+                                <label for="inPaginas">Nº de páginas:</label>
+                                <input type="text" class="form-control" id="inPaginas">
+                            </div>
+                    </form>
+                    <p>
+                        <button type="button" value="Adicionar" id="btAdicionar" class="btn btn-primary btn-lg">Adicionar</button>
+                    </p>
+
+                    <table class="table" id="tbGibis">
+                       <thead class="thead-dark">
+                           <tr>
+                               <th>Nome</th>
+                               <th>Roteirista</th>
+                               <th>Desenhista</th>
+                               <th>Editora(original)</th>
+                               <th>Editora(BR)</th>
+                               <th>Nº páginas</th>
+                               <th>
+                                <input type="checkbox" id="checkTodos">Todos
+                               </th>
+                           </tr>
+                       </thead>
+                       <tbody></tbody>
+                       </tbody>
+                    </table>
+                    <p>
+                        <button type="button" value="Excluir" id="btExcluir" class="btn btn-danger btn-lg">Excluir</button>
+                    </p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

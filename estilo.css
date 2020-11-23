@@ -1,0 +1,14 @@
+img.imgGibi{
+    max-width: 100%;
+}
+
+label{
+    font-weight: bold;
+}
+
+tr:nth-child(odd){
+    background-color: #d3f0ff;
+}
+tr:nth-child(even){
+    background-color: #ffcdcd;
+}
