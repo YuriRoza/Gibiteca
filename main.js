@@ -172,8 +172,8 @@ function excluir(){
 
         for (i = tam -1; i > 0; i--){
             if(checkExcluir[i].checked){
-                tbGibis.deleteRow[i];
-            }
+                tbGibis.deleteRow(i);
+            }   
         }
         checkExcluir[0].checked = false;
         }
