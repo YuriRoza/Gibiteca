@@ -1,11 +1,11 @@
 function adicionarGibi(){
     //entrada
-    var inNome = document.getElementById("inNome");
-    var inRoteirista = document.getElementById("inRoteirista");
-    var inDesenhista = document.getElementById("inDesenhista");
-    var inEditora = document.getElementById("inEditora");
-    var inEditoraBr = document.getElementById("inEditoraBr");
-    var inPaginas = document.getElementById("inPaginas");
+    var inNome = document.querySelector("#inNome");
+    var inRoteirista = document.querySelector("#inRoteirista");
+    var inDesenhista = document.querySelector("#inDesenhista");
+    var inEditora = document.querySelector("#inEditora");
+    var inEditoraBr = document.querySelector("#inEditoraBr");
+    var inPaginas = document.querySelector("#inPaginas");
 
     //seta os itens
     var nome = inNome.value;
@@ -22,7 +22,7 @@ function adicionarGibi(){
         return;
     }
 
-    var tbGibis = document.getElementById("tbGibis");
+    var tbGibis = document.querySelector("#tbGibis");
 
     inserirLinha(tbGibis, nome, roteirista, desenhista, editora, editoraBr, paginas); //insere as linhas na tabela
 
@@ -38,7 +38,7 @@ function adicionarGibi(){
     inNome.focus();
 }
 
-const btAdicionar = document.getElementById('btAdicionar');
+const btAdicionar = document.querySelector('#btAdicionar');
 btAdicionar.addEventListener("click", adicionarGibi);
 
 
@@ -101,7 +101,7 @@ function restaura(){
         var editorabrs = localStorage.getItem("gibisEditoraBr").split(";");
         var paginass = localStorage.getItem("gibisPaginas").split(";");
 
-        var tbGibis = document.getElementById("tbGibis");
+        var tbGibis = document.querySelector("#tbGibis");
 
         var tam = nomes.length;
         for (var i = 0; i < tam; i++){
@@ -112,10 +112,10 @@ function restaura(){
 restaura();
 
 //referencia para o todos marcar todos os checkboxes
-var checkTodos = document.getElementById("checkTodos");
+var checkTodos = document.querySelector("#checkTodos");
 
 checkTodos.addEventListener("change", function(){
-    var tbGibis = document.getElementById("tbGibis");
+    var tbGibis = document.querySelector("#tbGibis");
     var checkExcluir = tbGibis.getElementsByTagName("input");
 
     var status = checkTodos.checked;
@@ -130,7 +130,7 @@ checkTodos.addEventListener("change", function(){
 
 
 function excluir(){
-    var tbGibis = document.getElementById("tbGibis");
+    var tbGibis = document.querySelector("#tbGibis");
     var checkExcluir = tbGibis.getElementsByTagName("input");
 
     var selecao = false;
@@ -179,6 +179,6 @@ function excluir(){
         }
     }
 
-    const btExcluir = document.getElementById('btExcluir');
+    const btExcluir = document.querySelector('#btExcluir');
     btExcluir.addEventListener("click", excluir);
 
