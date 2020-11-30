@@ -89,6 +89,10 @@ function salvarGibi(nome, roteirista, desenhista, editora, editoraBr, paginas){
         localStorage.setItem("gibisEditoraBr", editoraBr);
         localStorage.setItem("gibisPaginas", paginas);
     }
+
+    
+    visita()
+    aleatorio()
 }
 
 function restaura(){
@@ -181,6 +185,7 @@ function excluir(){
     const btExcluir = document.querySelector('#btExcluir');
     btExcluir.addEventListener("click", excluir);
 
+//guarda a hora do acesso
 function visita(){
     var msg = document.querySelector("#msg");
     var data = new Date();
@@ -189,10 +194,25 @@ function visita(){
     var ano = data.getFullYear();
     var hora = data.getHours();
     var minuto = (data.getMinutes() < 10 ? '0' : '') + data.getMinutes();
-    var diaSemana = data.getDay()
+    var diaSemana = data.getDay();
 
-    var diaSemanaNome = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
-    var mesNome = new Array ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+    var diaSemanaNome = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado");
+    var mesNome = new Array ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12");
 
     msg.innerHTML = `Você acessou o site em ${diaSemanaNome[diaSemana]}, ${dia}/${mesNome[mes]}/${ano} às ${hora}:${minuto}`
 }
+// função de puxar imagem aleatória
+
+window.onload = aleatorio;
+
+var imagem = new Array ("imagens/01.jpg", "imagens/02.jpg", "imagens/03.jpg", "imagens/04.jpg", "imagens/05.jpg",
+                        "imagens/06.jpg", "imagens/07.jpg", "imagens/08.jpg", "imagens/09.jpg", "imagens/10.jpg")
+
+function aleatorio(){
+    var random = Math.floor(Math.random() * imagem.length);
+    document.querySelector("#img").src = imagem[random];
+}
+
+Element.addEventListener("load", visita())
+
+ 
