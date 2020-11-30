@@ -92,7 +92,7 @@ function salvarGibi(nome, roteirista, desenhista, editora, editoraBr, paginas){
 }
 
 function restaura(){
-    //recupera e faz o split nos itens salvos no localStorage
+
     if(localStorage.getItem("gibisNome")){
         var nomes = localStorage.getItem("gibisNome").split(";");
         var roteiristas = localStorage.getItem("gibisRoteirista").split(";");
@@ -111,8 +111,7 @@ function restaura(){
 }
 restaura();
 
-//referencia para o todos marcar todos os checkboxes
-var checkTodos = document.querySelector("#checkTodos");
+var checkTodos = document.querySelector("#checkTodos"); //marca tudo
 
 checkTodos.addEventListener("change", function(){
     var tbGibis = document.querySelector("#tbGibis");
