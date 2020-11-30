@@ -181,3 +181,11 @@ function excluir(){
     const btExcluir = document.querySelector('#btExcluir');
     btExcluir.addEventListener("click", excluir);
 
+function hora(){
+    var msg = document.querySelector("#msg");
+    var data = new Date();
+    var hora = data.getHours();
+    var minutos = data.getMinutes();
+
+    msg.innerHTML = `Agora são ${hora}:${minutos}`
+}
