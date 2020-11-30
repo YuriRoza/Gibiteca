@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Gibiteca</title>
 </head>
-<body>
+<body onload="hora()">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3">
@@ -71,11 +71,14 @@
     </div>
 
     <footer class="footer mt-5 py-4">
+        <div id="msg" class=" textfooter">
+            <p></p>
+        </div>
         <div class="container">
-            <p class="textfooter"> <i>Obrigado por usar a Gibiteca !
+            <p class="textfooter mt-2"> <i>Obrigado por usar a Gibiteca !
                 <br>
                 Gibiteca 2020 - Todos Direitos Reservados</i></p>
-        </div>    
+        </div> 
     </footer>
 
     <script src="main.js"></script>
