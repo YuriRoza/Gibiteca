@@ -181,11 +181,18 @@ function excluir(){
     const btExcluir = document.querySelector('#btExcluir');
     btExcluir.addEventListener("click", excluir);
 
-function hora(){
+function visita(){
     var msg = document.querySelector("#msg");
     var data = new Date();
+    var mes = data.getMonth();
+    var dia = data.getDate();
+    var ano = data.getFullYear();
     var hora = data.getHours();
     var minuto = (data.getMinutes() < 10 ? '0' : '') + data.getMinutes();
+    var diaSemana = data.getDay()
 
-    msg.innerHTML = `Agora são ${hora}:${minuto}`
+    var diaSemanaNome = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+    var mesNome = new Array ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+
+    msg.innerHTML = `Você acessou o site em ${diaSemanaNome[diaSemana]}, ${dia}/${mesNome[mes]}/${ano} às ${hora}:${minuto}`
 }
